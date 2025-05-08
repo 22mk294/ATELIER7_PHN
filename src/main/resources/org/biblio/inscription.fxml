@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.biblio.controllers.InscriptionController">
+    <VBox alignment="CENTER" layoutX="50.0" layoutY="30.0" spacing="10">
+        <children>
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Inscription Lecteur" />
+            <TextField fx:id="nomField" promptText="Nom complet" />
+            <TextField fx:id="emailField" promptText="Email" />
+            <PasswordField fx:id="passwordField" promptText="Mot de passe" />
+            <Button text="S'inscrire" onAction="#handleInscription" style="-fx-background-color: green; -fx-text-fill: white;" />
+            <Label fx:id="statusLabel" textFill="red" />
+            <Button text="Retour Menu Admin" layoutX="300" layoutY="400" onAction="#retourMenuAdmin" />
+
+        </children>
+        <padding><Insets top="20" left="80" right="80" bottom="20" /></padding>
+    </VBox>
+</AnchorPane>

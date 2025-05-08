@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.biblio.controllers.AdminMenuController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label text="👑 MENU ADMIN" layoutX="130" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+        <Button text="1. Ajouter un livre" layoutX="100" layoutY="60" onAction="#ajouterLivre"/>
+        <Button text="2. Supprimer un livre" layoutX="100" layoutY="100" onAction="#supprimerLivre"/>
+        <Button text="3. Voir livres disponibles" layoutX="100" layoutY="140" onAction="#voirLivresDisponibles"/>
+        <Button text="4. Voir livres empruntés" layoutX="100" layoutY="180" onAction="#voirLivresEmpruntes"/>
+        <Button text="5. Ajouter un bibliothécaire" layoutX="100" layoutY="220" onAction="#ajouterBibliothecaire"/>
+        <Button text="6. Supprimer un bibliothécaire" layoutX="100" layoutY="260" onAction="#supprimerBibliothecaire"/>
+        <Button text="0. Déconnexion" layoutX="100" layoutY="300" onAction="#seDeconnecter"/>
+    </children>
+</AnchorPane>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.biblio.controllers.EmpruntLecteurController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="10" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" AnchorPane.bottomAnchor="10">
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20"/>
+        </padding>
+        <Label text="📖 Choisissez un livre à emprunter" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+        <TableView fx:id="livreTable" prefHeight="300">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID" prefWidth="50" />
+                <TableColumn fx:id="titreCol" text="Titre" prefWidth="150" />
+                <TableColumn fx:id="auteurCol" text="Auteur" prefWidth="100" />
+                <TableColumn fx:id="anneeCol" text="Année" prefWidth="80" />
+            </columns>
+        </TableView>
+        <HBox spacing="10">
+            <Button text="📚 Emprunter" onAction="#handleEmprunt" />
+            <Label fx:id="messageLabel" textFill="green" />
+        </HBox>
+        <Button text="Retour" layoutX="400" layoutY="400" onAction="#retourMenuLecteur"/>
+
+    </VBox>
+</AnchorPane>

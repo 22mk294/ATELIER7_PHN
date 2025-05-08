@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.biblio.controllers.AjouterLivreController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label text="📚 Ajouter un livre" layoutX="220" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <!-- Champs communs -->
+        <Label layoutX="50" layoutY="70" text="Titre:" />
+        <TextField fx:id="titreField" layoutX="200" layoutY="65" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="110" text="Auteur:" />
+        <TextField fx:id="auteurField" layoutX="200" layoutY="105" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="150" text="Année publication:" />
+        <TextField fx:id="anneeField" layoutX="200" layoutY="145" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="190" text="ISBN:" />
+        <TextField fx:id="isbnField" layoutX="200" layoutY="185" prefWidth="300" />
+
+        <Label layoutX="50" layoutY="230" text="Type de livre:" />
+        <ComboBox fx:id="typeComboBox" layoutX="200" layoutY="225" prefWidth="300" />
+
+        <!-- Roman -->
+        <Label fx:id="genreLabel" layoutX="50" layoutY="270" text="Genre:" visible="false"/>
+        <TextField fx:id="genreField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
+
+        <Label fx:id="pagesLabel" layoutX="50" layoutY="310" text="Nombre de pages:" visible="false"/>
+        <TextField fx:id="pagesField" layoutX="200" layoutY="305" prefWidth="300" visible="false"/>
+
+        <!-- Biographie -->
+        <Label fx:id="sujetLabel" layoutX="50" layoutY="270" text="Sujet:" visible="false"/>
+        <TextField fx:id="sujetField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
+
+        <!-- Magazine -->
+        <Label fx:id="numeroLabel" layoutX="50" layoutY="270" text="Numéro:" visible="false"/>
+        <TextField fx:id="numeroField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
+
+        <Label fx:id="moisLabel" layoutX="50" layoutY="310" text="Mois publication:" visible="false"/>
+        <TextField fx:id="moisField" layoutX="200" layoutY="305" prefWidth="300" visible="false"/>
+
+        <!-- Science-Fiction -->
+        <Label fx:id="universLabel" layoutX="50" layoutY="270" text="Univers:" visible="false"/>
+        <TextField fx:id="universField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
+
+        <!-- Boutons -->
+        <Button text="Ajouter Livre" layoutX="150" layoutY="400" onAction="#ajouterLivre" />
+        <Button text="Retour Menu Admin" layoutX="300" layoutY="400" onAction="#retourMenuAdmin" />
+    </children>
+</AnchorPane>
