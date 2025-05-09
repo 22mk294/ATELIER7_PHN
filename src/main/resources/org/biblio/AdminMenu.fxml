@@ -1,24 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.biblio.controllers.AdminMenuController"
-            prefHeight="400.0" prefWidth="600.0">
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #222020;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.AdminMenuController">
     <children>
-        <Label text="👑 MENU ADMIN" layoutX="130" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
-
-        <Button text="1. Ajouter un livre" layoutX="100" layoutY="60" onAction="#ajouterLivre"/>
-        <Button text="2. Supprimer un livre" layoutX="100" layoutY="100" onAction="#supprimerLivre"/>
-        <Button text="3. Voir livres disponibles" layoutX="100" layoutY="140" onAction="#voirLivresDisponibles"/>
-        <Button text="4. Voir livres empruntés" layoutX="100" layoutY="180" onAction="#voirLivresEmpruntes"/>
-        <Button text="5. Ajouter un bibliothécaire" layoutX="100" layoutY="220" onAction="#ajouterBibliothecaire"/>
-        <Button text="6. Supprimer un bibliothécaire" layoutX="100" layoutY="260" onAction="#supprimerBibliothecaire"/>
-        <Button text="0. Déconnexion" layoutX="100" layoutY="300" onAction="#seDeconnecter"/>
+      <VBox alignment="TOP_CENTER" layoutX="191.0" layoutY="41.0" prefHeight="300.0" prefWidth="218.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <children>
+              <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="MENU ADMINISTRATEUR" textFill="WHITE" />
+      
+              <Button maxWidth="-Infinity" onAction="#ajouterLivre" prefHeight="25.0" prefWidth="176.0" text="Ajouter un livre">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+              <Button onAction="#supprimerLivre" prefHeight="25.0" prefWidth="176.0" text="Supprimer un livre">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+              <Button onAction="#voirLivresDisponibles" prefHeight="25.0" prefWidth="176.0" text="Voir livres disponibles">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+              <Button onAction="#voirLivresEmpruntes" prefHeight="25.0" prefWidth="176.0" text="Voir livres empruntés">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+              <Button onAction="#ajouterBibliothecaire" prefHeight="25.0" prefWidth="176.0" text="Ajouter un bibliothécaire">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+              <Button onAction="#seDeconnecter" prefHeight="25.0" prefWidth="176.0" style="-fx-background-color: red;" text="0. Déconnexion" textFill="#f2f2f2">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>
