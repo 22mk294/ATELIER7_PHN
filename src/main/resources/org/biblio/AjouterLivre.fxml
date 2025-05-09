@@ -54,5 +54,6 @@
         <!-- Boutons -->
         <Button text="Ajouter Livre" layoutX="150" layoutY="400" onAction="#ajouterLivre" />
         <Button text="Retour Menu Admin" layoutX="300" layoutY="400" onAction="#retourMenuAdmin" />
+        <Button text="Retour Menu Biblio" layoutX="300" layoutY="400" onAction="#retourMenuBiblio" />
     </children>
 </AnchorPane>

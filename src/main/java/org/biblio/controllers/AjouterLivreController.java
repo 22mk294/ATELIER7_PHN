@@ -162,4 +162,9 @@ public class AjouterLivreController {
     private void retourMenuAdmin() {
         ViewLoader.loadView("AdminMenu.fxml", "admin");
     }
+    @FXML
+    private void retourMenuBiblio() {
+        ViewLoader.loadView("bibliothecaire_menu.fxml", "biblio");
+    }
 }
+
