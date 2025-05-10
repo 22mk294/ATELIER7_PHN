@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #001e65;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.LivresDisponiblesController">
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+        <children>
+
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="📗 Livres disponibles" textFill="WHITE" />
+
+            <ListView fx:id="livreListView" prefHeight="320" prefWidth="500" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+
+            <Label fx:id="emptyLabel" style="-fx-font-size: 14px;" textFill="red" visible="false" />
+
+            <Button onAction="#retourMenuBib" text="Retour">
+                <VBox.margin>
+                    <Insets top="10.0" />
+                </VBox.margin>bi
+            </Button>
+        </children>
+    </VBox>
+
+</AnchorPane>
+

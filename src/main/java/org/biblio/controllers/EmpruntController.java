@@ -12,6 +12,7 @@ import org.biblio.dao.LecteurDAO;
 import org.biblio.dao.LivreDAO;
 import org.biblio.model.utilisateurs.Lecteur;
 import org.biblio.model.livres.Livre;
+import org.biblio.service.ViewLoader;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -92,5 +93,9 @@ public class EmpruntController implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    @FXML
+    private void retourMenuBiblio() {
+        ViewLoader.loadView("bibliothecaire_menu.fxml", "biblio");
     }
 }

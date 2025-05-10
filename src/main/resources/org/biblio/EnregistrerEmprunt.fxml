@@ -46,6 +46,12 @@
          <VBox.margin>
             <Insets bottom="3.0" top="3.0" />
          </VBox.margin></Button>
+
+        <Button onAction="#retourMenuBiblio" text="Retour">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Button>
       <opaqueInsets>
          <Insets />
       </opaqueInsets>
