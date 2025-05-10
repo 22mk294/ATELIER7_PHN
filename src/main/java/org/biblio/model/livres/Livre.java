@@ -30,6 +30,17 @@ public abstract class Livre {
         this.disponible = disponible;
     }
 
+    @Override
+    public String toString() {
+        return "Livre{" +
+                "id=" + id +
+                ", titre='" + titre + '\'' +
+                ", auteur='" + auteur + '\'' +
+                ", anneePublication=" + anneePublication +
+                ", isbn='" + isbn + '\'' +
+                ", disponible=" + disponible +
+                '}';
+    }
 
     public String getDetailsAsString() {
         String type = this.getClass().getSimpleName(); // Renvoie "Roman", "Biographie", etc.

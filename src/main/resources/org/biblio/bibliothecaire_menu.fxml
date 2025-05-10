@@ -1,25 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.biblio.controllers.BibliothecaireMenuController"
-            prefHeight="400.0" prefWidth="600.0">
-    <Text layoutX="100" layoutY="40" text="📚 MENU BIBLIOTHÉCAIRE"
-          style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
 
-    <Button layoutX="100" layoutY="80" prefWidth="200" text="Ajouter un livre" onAction="#ajouterLivre"/>
-    <Button layoutX="100" layoutY="130" prefWidth="200" text="Supprimer un livre" onAction="#supprimerLivre"/>
-    <Button layoutX="100" layoutY="180" prefWidth="200" text="Enregistrer un emprunt" onAction="#enregistrerEmprunt"/>
-    <Button layoutX="100" layoutY="230" prefWidth="200" text="Appliquer une sanction" onAction="#appliquerSanction"/>
-    <Button layoutX="100" layoutY="280" prefWidth="200" text="Voir livres disponibles" onAction="#voirLivresDisponibles"/>
-    <Button layoutX="100" layoutY="330" prefWidth="200" text="Voir livres empruntés" onAction="#voirLivresEmpruntes"/>
-    <Button layoutX="100" layoutY="400" prefWidth="200" text="Déconnexion" onAction="#deconnexion"/>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #001e65;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.BibliothecaireMenuController">
+   <VBox alignment="TOP_CENTER" layoutX="4.0" layoutY="10.0" prefHeight="321.0" prefWidth="440.0" style="-fx-background-color: #003380;" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="60.0">
+      <children>
+         <Text fill="WHITE" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="📚 MENU BIBLIOTHÉCAIRE" />
+         <Button onAction="#ajouterLivre" prefWidth="200" style="-fx-background-color: orange;" text="Ajouter un livre">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+         <Button onAction="#supprimerLivre" prefWidth="200" text="Supprimer un livre">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+         <Button onAction="#enregistrerEmprunt" prefWidth="200" text="Enregistrer un emprunt">
+            <VBox.margin>
+               <Insets top="9.0" />
+            </VBox.margin>
+         </Button>
+         <Button onAction="#appliquerSanction" prefWidth="200" text="Appliquer une sanction">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+         <Button onAction="#voirLivresDisponibles" prefWidth="200" text="Voir livres disponibles">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+         <Button onAction="#voirLivresEmpruntes" prefWidth="200" text="Voir livres empruntés">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+
+         <Button onAction="#deconnexion" prefWidth="200" text="Déconnexion">
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Button>
+      </children>
+   </VBox>
 
 </AnchorPane>

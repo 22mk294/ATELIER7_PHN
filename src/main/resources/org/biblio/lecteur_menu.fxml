@@ -23,6 +23,10 @@
     <Button text="3. Emprunter un livre" layoutX="100" layoutY="160" prefWidth="200"
             onAction="#handleEmprunterLivre"/>
 
+    <Button text="3. Demande" layoutX="100" layoutY="160" prefWidth="200"
+            onAction="#demanderEmprunt"/>
+
+
     <Button text="4. Retourner un livre" layoutX="100" layoutY="200" prefWidth="200"
             onAction="#handleRetournerLivre"/>
 

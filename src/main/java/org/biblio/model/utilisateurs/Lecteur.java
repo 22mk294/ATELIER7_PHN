@@ -18,6 +18,21 @@ public class Lecteur extends Utilisateur {
     }
 
     @Override
+    public String getNom() {
+        return super.getNom();
+    }
+
+    @Override
+    public String toString() {
+        return "Lecteur{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", email='" + email + '\'' +
+                ", motDePasse='" + motDePasse + '\'' +
+                '}';
+    }
+
+    @Override
     public void afficherMenu() {
         ViewLoader.loadView("lecteur_menu.fxml","lecteur");
     }
@@ -35,9 +50,18 @@ public class Lecteur extends Utilisateur {
         ViewLoader.loadView("EmpruntLecteur.fxml","livres");
     }
 
+    public static void demanderEmprunt() {
+        ViewLoader.loadView("Demande" +
+                "EmpruntLecteur.fxml","livres");
+
+    }
+
+
     private void retournerLivre(Scanner sc) {
         System.out.print("ID de l'emprunt à retourner : ");
         int idEmprunt = sc.nextInt();
         EmpruntDAO.retournerLivre(idEmprunt);
     }
+
+
 }

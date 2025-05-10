@@ -5,5 +5,7 @@ module org.biblio {
 
     opens org.biblio.controllers to javafx.fxml;
     opens org.biblio to javafx.fxml;
+    opens org.biblio.model to javafx.base;
+
     exports org.biblio;
 }

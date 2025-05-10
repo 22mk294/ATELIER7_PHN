@@ -20,6 +20,7 @@ public class BibliothecaireMenuController {
 
     @FXML
     public void enregistrerEmprunt(ActionEvent event) {
+        org.biblio.model.utilisateurs.Bibliothecaire.enregistrerEmprunt();
 
     }
 
@@ -32,6 +33,7 @@ public class BibliothecaireMenuController {
     public void voirLivresDisponibles(ActionEvent event) {
         org.biblio.model.utilisateurs.Bibliothecaire.voirLivresDisponibles();
     }
+
 
     @FXML
     public void voirLivresEmpruntes(ActionEvent event) {

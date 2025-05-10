@@ -28,13 +28,10 @@ public class Bibliothecaire extends Utilisateur {
         ViewLoader.loadView("SupprimerLivre.fxml","Menu");
     }
 
-    private void enregistrerEmprunt(Scanner sc) {
-        System.out.print("ID du lecteur: ");
-        int idLecteur = sc.nextInt();
-        System.out.print("ID du livre: ");
-        int idLivre = sc.nextInt();
 
-        EmpruntDAO.enregistrerEmprunt(idLivre, idLecteur);
+    public static void enregistrerEmprunt() {
+        ViewLoader.loadView("EnregistrerEmprunt.fxml","Menu");
+
     }
 
     private void appliquerSanction(Scanner sc) {
@@ -43,6 +40,10 @@ public class Bibliothecaire extends Utilisateur {
 
     public static void voirLivresDisponibles() {
         ViewLoader.loadView("livres_disponibles.fxml","Menu");
+    }
+
+    public static void verifiedemande() {
+        ViewLoader.loadView("ValidationDemandesEmprunt.fxml","Menu");
     }
 
     private void voirLivresEmpruntes() {

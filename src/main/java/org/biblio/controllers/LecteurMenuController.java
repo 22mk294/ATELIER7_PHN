@@ -56,8 +56,12 @@ public class LecteurMenuController {
         System.out.println("Emprunter un livre...");
     }
 
+
     private void retournerLivre() {
         System.out.println("Retourner un livre...");
     }
-
+    @FXML
+    public void demanderEmprunt(ActionEvent event) {
+        org.biblio.model.utilisateurs.Lecteur.demanderEmprunt();
+    }
 }

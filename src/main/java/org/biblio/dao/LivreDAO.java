@@ -14,20 +14,26 @@ public class LivreDAO {
 
     public static List<Livre> getLivresDisponibles() {
         List<Livre> livres = new ArrayList<>();
-        String sql = "SELECT * FROM livres WHERE disponible = true";
+        String sql = "SELECT id, titre, auteur, annee_publication, isbn FROM livres WHERE disponible = true";
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement ps = conn.prepareStatement(sql);
              ResultSet rs = ps.executeQuery()) {
             while (rs.next()) {
-                livres.add(new LivreSimple(rs.getInt("id"), rs.getString("titre"),
-                        rs.getString("auteur"), rs.getInt("annee_publication"),
-                        rs.getString("isbn"), true));
+                livres.add(new LivreSimple(
+                        rs.getInt("id"),
+                        rs.getString("titre"),
+                        rs.getString("auteur"),
+                        rs.getInt("annee_publication"),
+                        rs.getString("isbn"),
+                        true
+                ));
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return livres;
     }
+
 
     public static List<Livre> getTousLesLivres() {
         List<Livre> livres = new ArrayList<>();

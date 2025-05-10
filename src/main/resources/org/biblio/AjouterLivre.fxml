@@ -1,59 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.biblio.controllers.AjouterLivreController"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #001e65;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.AjouterLivreController">
     <children>
-        <Label text="📚 Ajouter un livre" layoutX="220" layoutY="20" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
-
-        <!-- Champs communs -->
-        <Label layoutX="50" layoutY="70" text="Titre:" />
-        <TextField fx:id="titreField" layoutX="200" layoutY="65" prefWidth="300" />
-
-        <Label layoutX="50" layoutY="110" text="Auteur:" />
-        <TextField fx:id="auteurField" layoutX="200" layoutY="105" prefWidth="300" />
-
-        <Label layoutX="50" layoutY="150" text="Année publication:" />
-        <TextField fx:id="anneeField" layoutX="200" layoutY="145" prefWidth="300" />
-
-        <Label layoutX="50" layoutY="190" text="ISBN:" />
-        <TextField fx:id="isbnField" layoutX="200" layoutY="185" prefWidth="300" />
-
-        <Label layoutX="50" layoutY="230" text="Type de livre:" />
-        <ComboBox fx:id="typeComboBox" layoutX="200" layoutY="225" prefWidth="300" />
-
-        <!-- Roman -->
-        <Label fx:id="genreLabel" layoutX="50" layoutY="270" text="Genre:" visible="false"/>
-        <TextField fx:id="genreField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
-
-        <Label fx:id="pagesLabel" layoutX="50" layoutY="310" text="Nombre de pages:" visible="false"/>
-        <TextField fx:id="pagesField" layoutX="200" layoutY="305" prefWidth="300" visible="false"/>
-
-        <!-- Biographie -->
-        <Label fx:id="sujetLabel" layoutX="50" layoutY="270" text="Sujet:" visible="false"/>
-        <TextField fx:id="sujetField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
-
-        <!-- Magazine -->
-        <Label fx:id="numeroLabel" layoutX="50" layoutY="270" text="Numéro:" visible="false"/>
-        <TextField fx:id="numeroField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
-
-        <Label fx:id="moisLabel" layoutX="50" layoutY="310" text="Mois publication:" visible="false"/>
-        <TextField fx:id="moisField" layoutX="200" layoutY="305" prefWidth="300" visible="false"/>
-
-        <!-- Science-Fiction -->
-        <Label fx:id="universLabel" layoutX="50" layoutY="270" text="Univers:" visible="false"/>
-        <TextField fx:id="universField" layoutX="200" layoutY="265" prefWidth="300" visible="false"/>
-
-        <!-- Boutons -->
-        <Button text="Ajouter Livre" layoutX="150" layoutY="400" onAction="#ajouterLivre" />
-        <Button text="Retour Menu Admin" layoutX="300" layoutY="400" onAction="#retourMenuAdmin" />
-        <Button text="Retour Menu Biblio" layoutX="300" layoutY="400" onAction="#retourMenuBiblio" />
+      <VBox alignment="TOP_CENTER" layoutX="200.0" layoutY="-4.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #003380;" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="80.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="60.0">
+         <children>
+              <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="📚 Ajouter un livre" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <TextField fx:id="titreField" prefHeight="25.0" prefWidth="352.0" promptText="Titre">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                    <TextField fx:id="auteurField" prefWidth="300" promptText="Auteur">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                    <TextField fx:id="anneeField" prefWidth="300" promptText="Année de publication">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </TextField>
+                    <TextField fx:id="isbnField" prefWidth="300" promptText="ISBN">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </VBox.margin>
+            </HBox>
+      
+              <Label text="Type de livre:" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+              <ComboBox fx:id="typeComboBox" prefWidth="300">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </ComboBox>
+      
+              <!-- Roman -->
+              <Label fx:id="genreLabel" text="Genre:" textFill="WHITE" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+              <TextField fx:id="genreField" prefWidth="300" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+      
+              <Label fx:id="pagesLabel" text="Nombre de pages:" textFill="WHITE" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+              <TextField fx:id="pagesField" prefWidth="300" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+      
+              <!-- Biographie -->
+              <Label fx:id="sujetLabel" text="Sujet:" textFill="WHITE" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+              <TextField fx:id="sujetField" prefWidth="300" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+      
+              <!-- Magazine -->
+              <Label fx:id="numeroLabel" text="Numéro:" textFill="WHITE" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+              <TextField fx:id="numeroField" prefWidth="300" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+      
+              <Label fx:id="moisLabel" text="Mois publication:" textFill="WHITE" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+              <TextField fx:id="moisField" prefWidth="300" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+      
+              <!-- Science-Fiction -->
+              <Label fx:id="universLabel" text="Univers:" textFill="WHITE" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+              <TextField fx:id="universField" prefWidth="300" visible="false">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="10.0" />
+               </VBox.margin>
+            </TextField>
+            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+            
+                    <!-- Boutons -->
+                    <Button onAction="#ajouterLivre" style="-fx-background-color: green;" text="Ajouter Livre" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                    <Button onAction="#retourMenuAdmin" text="Retour Menu Admin">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                    <Button onAction="#retourMenuBiblio" text="Retour Menu Biblio">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
     </children>
 </AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.biblio.controllers.EmpruntController"
+            prefHeight="400.0" prefWidth="600.0">
+    <VBox spacing="15" layoutX="20" layoutY="20" prefWidth="760">
+        <!-- Tableau des lecteurs -->
+        <Label text="👤 Liste des lecteurs"/>
+        <TableView fx:id="lecteurTableView" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="colIdLecteur" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colNomLecteur" text="Nom" prefWidth="150"/>
+                <TableColumn fx:id="colPrenomLecteur" text="Prénom" prefWidth="150"/>
+            </columns>
+        </TableView>
+
+        <!-- Tableau des livres -->
+        <Label text="📚 Livres disponibles"/>
+        <TableView fx:id="livreTableView" prefHeight="150">
+            <columns>
+                <TableColumn fx:id="colIdLivre" text="ID" prefWidth="50"/>
+                <TableColumn fx:id="colTitreLivre" text="Titre" prefWidth="200"/>
+                <TableColumn fx:id="colAuteurLivre" text="Auteur" prefWidth="150"/>
+            </columns>
+        </TableView>
+
+        <Button text="✅ Enregistrer l'emprunt"
+                onAction="#enregistrerEmprunt"
+                prefWidth="200"/>
+    </VBox>
+</AnchorPane>
