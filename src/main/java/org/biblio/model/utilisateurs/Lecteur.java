@@ -51,16 +51,14 @@ public class Lecteur extends Utilisateur {
     }
 
     public static void demanderEmprunt() {
-        ViewLoader.loadView("Demande" +
-                "EmpruntLecteur.fxml","livres");
+        ViewLoader.loadView("DemandeEmpruntView.fxml","livres");
 
     }
 
 
-    private void retournerLivre(Scanner sc) {
-        System.out.print("ID de l'emprunt à retourner : ");
-        int idEmprunt = sc.nextInt();
-        EmpruntDAO.retournerLivre(idEmprunt);
+    public static void retournerLivre() {
+        ViewLoader.loadView("retour_livre.fxml","livres");
+
     }
 
 

@@ -27,11 +27,6 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </Button>
-              <Button onAction="#voirLivresEmpruntes" prefHeight="25.0" prefWidth="176.0" text="Voir livres empruntés">
-               <VBox.margin>
-                  <Insets top="20.0" />
-               </VBox.margin>
-            </Button>
               <Button onAction="#ajouterBibliothecaire" prefHeight="25.0" prefWidth="176.0" text="Ajouter un bibliothécaire">
                <VBox.margin>
                   <Insets top="20.0" />

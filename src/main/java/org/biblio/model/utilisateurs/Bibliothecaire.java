@@ -21,11 +21,11 @@ public class Bibliothecaire extends Utilisateur {
     }
 
     public static void ajouterLivre() {
-        ViewLoader.loadView("AjouterLivre.fxml","Menu");
+        ViewLoader.loadView("AjouterLivreBib.fxml","Menu");
     }
 
     public static void supprimerLivre() {
-        ViewLoader.loadView("SupprimerLivre.fxml","Menu");
+        ViewLoader.loadView("SupprimerLivreBib.fxml","Menu");
     }
 
 

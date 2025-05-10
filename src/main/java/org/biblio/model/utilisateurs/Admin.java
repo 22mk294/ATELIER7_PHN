@@ -37,8 +37,7 @@ public class Admin extends Utilisateur {
 
 
     private void voirLivresEmpruntes() {
-        EmpruntDAO.afficherEmpruntsActifs();
-    }
+        }
 
     public static void ajouterBibliothecaire() {
         ViewLoader.loadView("AjouterBibliothecaire.fxml","Livre");

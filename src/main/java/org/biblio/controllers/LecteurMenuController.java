@@ -34,7 +34,8 @@ public class LecteurMenuController {
 
     @FXML
     private void handleRetournerLivre(ActionEvent event) {
-        retournerLivre();
+        org.biblio.model.utilisateurs.Lecteur.retournerLivre();
+
     }
 
     @FXML

@@ -41,7 +41,7 @@
             </VBox.margin>
          </Button>
 
-         <Button onAction="#deconnexion" prefWidth="200" text="Déconnexion">
+         <Button onAction="#deconnexion" prefWidth="200" style="-fx-background-color: red;" text="Déconnexion">
             <VBox.margin>
                <Insets top="10.0" />
             </VBox.margin>

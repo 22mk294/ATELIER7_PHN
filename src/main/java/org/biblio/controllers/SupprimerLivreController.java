@@ -72,4 +72,8 @@ public class SupprimerLivreController {
     private void retourMenuAdmin() {
         ViewLoader.loadView("AdminMenu.fxml","lecteur");
     }
+    @FXML
+    private void retourMenuBib() {
+        ViewLoader.loadView("bibliothecaire_menu.fxml","lecteur");
+    }
 }

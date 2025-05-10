@@ -17,6 +17,26 @@ public abstract class Livre {
         this.disponible = disponible;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
+    }
+
+    public void setAnneePublication(int anneePublication) {
+        this.anneePublication = anneePublication;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
     public abstract void afficherDetails();
 
     public int getId() { return id; }

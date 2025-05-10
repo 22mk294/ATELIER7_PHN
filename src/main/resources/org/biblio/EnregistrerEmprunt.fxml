@@ -1,38 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.biblio.controllers.EmpruntController"
-            prefHeight="400.0" prefWidth="600.0">
-    <VBox spacing="15" layoutX="20" layoutY="20" prefWidth="760">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #001e65;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.EmpruntController">
+    <VBox alignment="TOP_CENTER" layoutX="20" layoutY="20" prefWidth="760" spacing="15" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="35.0">
         <!-- Tableau des lecteurs -->
-        <Label text="👤 Liste des lecteurs"/>
-        <TableView fx:id="lecteurTableView" prefHeight="150">
+        <Label text="👤 Liste des lecteurs" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="3.0" top="3.0" />
+         </VBox.margin></Label>
+        <TableView fx:id="lecteurTableView" prefHeight="125.0" prefWidth="510.0">
             <columns>
-                <TableColumn fx:id="colIdLecteur" text="ID" prefWidth="50"/>
-                <TableColumn fx:id="colNomLecteur" text="Nom" prefWidth="150"/>
-                <TableColumn fx:id="colPrenomLecteur" text="Prénom" prefWidth="150"/>
+                <TableColumn fx:id="colIdLecteur" prefWidth="50" text="ID" />
+                <TableColumn fx:id="colNomLecteur" prefWidth="150" text="Nom" />
+                <TableColumn fx:id="colPrenomLecteur" prefWidth="150" text="Prénom" />
             </columns>
+         <VBox.margin>
+            <Insets bottom="3.0" top="3.0" />
+         </VBox.margin>
         </TableView>
 
         <!-- Tableau des livres -->
-        <Label text="📚 Livres disponibles"/>
+        <Label text="📚 Livres disponibles" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="3.0" top="3.0" />
+         </VBox.margin></Label>
         <TableView fx:id="livreTableView" prefHeight="150">
             <columns>
-                <TableColumn fx:id="colIdLivre" text="ID" prefWidth="50"/>
-                <TableColumn fx:id="colTitreLivre" text="Titre" prefWidth="200"/>
-                <TableColumn fx:id="colAuteurLivre" text="Auteur" prefWidth="150"/>
+                <TableColumn fx:id="colIdLivre" prefWidth="50" text="ID" />
+                <TableColumn fx:id="colTitreLivre" prefWidth="200" text="Titre" />
+                <TableColumn fx:id="colAuteurLivre" prefWidth="150" text="Auteur" />
             </columns>
+         <VBox.margin>
+            <Insets bottom="3.0" top="3.0" />
+         </VBox.margin>
         </TableView>
 
-        <Button text="✅ Enregistrer l'emprunt"
-                onAction="#enregistrerEmprunt"
-                prefWidth="200"/>
+        <Button onAction="#enregistrerEmprunt" prefWidth="200" style="-fx-background-color: green;" text="✅ Enregistrer l'emprunt" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="3.0" top="3.0" />
+         </VBox.margin></Button>
+      <opaqueInsets>
+         <Insets />
+      </opaqueInsets>
     </VBox>
 </AnchorPane>

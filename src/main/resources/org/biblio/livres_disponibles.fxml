@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.biblio.controllers.LivresDisponiblesController"
-            prefHeight="450.0" prefWidth="600.0">
-
-    <Label text="📗 Livres disponibles" layoutX="160" layoutY="20"
-           style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
-
-    <ListView fx:id="livreListView" layoutX="50" layoutY="60" prefWidth="500" prefHeight="320"
-              style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;"/>
-
-    <Label fx:id="emptyLabel" layoutX="50" layoutY="390" textFill="red"
-           style="-fx-font-size: 14px;" visible="false"/>
-
-    <Button text="Retour Menu Admin" layoutX="400" layoutY="400" onAction="#retourMenuAdmin"/>
+<AnchorPane prefHeight="450.0" prefWidth="600.0" style="-fx-background-color: #001e65;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.LivresDisponiblesController">
+   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0">
+      <children>
+      
+          <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="📗 Livres disponibles" textFill="WHITE" />
+      
+          <ListView fx:id="livreListView" prefHeight="320" prefWidth="500" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+      
+          <Label fx:id="emptyLabel" style="-fx-font-size: 14px;" textFill="red" visible="false" />
+      
+          <Button onAction="#retourMenuAdmin" style="-fx-background-color: red;" text="Retour Menu Admin" textFill="WHITE">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+         </Button>
+      </children>
+   </VBox>
 
 </AnchorPane>
-

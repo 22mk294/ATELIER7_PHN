@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #001e65;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.RetourLivreController">
+    <VBox alignment="TOP_CENTER" layoutX="30" layoutY="20" spacing="15" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="45.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="35.0">
+        <HBox spacing="10">
+            <Label text="ID Lecteur :" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+            <HBox.margin>
+               <Insets top="10.0" />
+            </HBox.margin></Label>
+            <TextField fx:id="idLecteurField" promptText="Entrez l'ID du lecteur">
+            <HBox.margin>
+               <Insets top="10.0" />
+            </HBox.margin></TextField>
+            <Button onAction="#rechercherEmprunts" text="🔍 Rechercher">
+            <HBox.margin>
+               <Insets top="10.0" />
+            </HBox.margin></Button>
+        </HBox>
+
+        <TableView fx:id="empruntTable">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="100" text="ID Emprunt" />
+                <TableColumn fx:id="colTitre" prefWidth="250" text="Titre du livre" />
+                <TableColumn fx:id="colDate" prefWidth="150" text="Date Emprunt" />
+            </columns>
+        </TableView>
+
+        <Button onAction="#handleRetour" style="-fx-background-color: red;" text="✅ Retourner le livre" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin></Button>
+    </VBox>
+</AnchorPane>

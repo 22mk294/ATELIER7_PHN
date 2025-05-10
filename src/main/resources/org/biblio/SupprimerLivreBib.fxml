@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #001e65;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.biblio.controllers.SupprimerLivreController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="35.0">
+            <children>
+                <Label style="-fx-font-size: 20px; -fx-font-weight: bold;" text="🗑️ Supprimer un livre" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+
+                <TableView fx:id="tableView" prefHeight="250" prefWidth="540">
+                    <columns>
+                        <TableColumn fx:id="idCol" prefWidth="50" text="ID" />
+                        <TableColumn fx:id="titreCol" prefWidth="150" text="Titre" />
+                        <TableColumn fx:id="auteurCol" prefWidth="150" text="Auteur" />
+                        <TableColumn fx:id="anneeCol" prefWidth="80" text="Année" />
+                        <TableColumn fx:id="isbnCol" prefWidth="110" text="ISBN" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TableView>
+
+                <Label text="ID à supprimer:" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="idField" prefWidth="100">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </TextField>
+
+                <Button onAction="#supprimerLivre" style="-fx-background-color: red;" text="Supprimer" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+                <Button onAction="#retourMenuBib" text="Retour">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>bi
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
+
