@@ -17,7 +17,7 @@
             <PasswordField fx:id="passwordField" promptText="Mot de passe" />
             <Button onAction="#handleInscription" style="-fx-background-color: green; -fx-text-fill: white;" text="S'inscrire" />
             <Label fx:id="statusLabel" textFill="red" />
-            <Button layoutX="300" layoutY="400" onAction="#retourMenuAdmin" text="Retour Menu Admin" />
+            <Button layoutX="300" layoutY="400" onAction="#retour" text="Retour" />
 
         </children>
         <padding><Insets bottom="20" left="80" right="80" top="20" /></padding>

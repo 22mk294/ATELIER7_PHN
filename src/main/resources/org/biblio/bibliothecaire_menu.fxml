@@ -25,13 +25,8 @@
                <Insets top="9.0" />
             </VBox.margin>
          </Button>
-         
-         <Button onAction="#voirLivresDisponibles" prefWidth="200" text="Voir livres disponibles">
-            <VBox.margin>
-               <Insets top="10.0" />
-            </VBox.margin>
-         </Button>
-         <Button onAction="#voirLivresEmpruntes" prefWidth="200" text="Voir livres empruntés">
+
+         <Button onAction="#voirLivresDisponibles" prefWidth="200" text="Voir livres disponibles et Emprunté">
             <VBox.margin>
                <Insets top="10.0" />
             </VBox.margin>

@@ -34,7 +34,7 @@ public class InscriptionController {
         }
     }
     @FXML
-    private void retourMenuAdmin() {
+    private void retour() {
         ViewLoader.loadView("login.fxml", "admin");
     }
 }

@@ -39,6 +39,11 @@ public class LivresDisponiblesController {
     private void retourMenuBib() {
         ViewLoader.loadView("bibliothecaire_menu.fxml","lecteur");
     }
+    @FXML
+    private void retourMenuAdmin() {
+        ViewLoader.loadView("AdminMenu.fxml", "admin");
+    }
+
 
 
 }

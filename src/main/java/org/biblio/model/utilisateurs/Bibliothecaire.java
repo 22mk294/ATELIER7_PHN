@@ -39,7 +39,7 @@ public class Bibliothecaire extends Utilisateur {
     }
 
     public static void voirLivresDisponibles() {
-        ViewLoader.loadView("livres_disponibles.fxml","Menu");
+        ViewLoader.loadView("livres_disponibles_bib.fxml","Menu");
     }
 
     public static void verifiedemande() {
